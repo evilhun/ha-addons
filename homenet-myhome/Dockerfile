@@ -1,6 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
-LABEL maintainer="YOGYUI lee2002w@gmail.com"
+LABEL maintainer="evilhun xlion@ymail.com"
 
 # install required packages
 RUN apk add --update --no-cache \
@@ -10,9 +10,9 @@ RUN apk add --update --no-cache \
     python3 python3-dev py3-pip
 
 # clone repository from GitHub
-RUN mkdir -p /repos/yogyui
-RUN git clone https://github.com/YOGYUI/HomeNetwork.git /repos/yogyui/HomeNetwork
-WORKDIR /repos/yogyui/HomeNetwork/Hillstate-Gwanggyosan
+RUN mkdir -p /repos/evilhun
+RUN git clone https://github.com/evilhun/HomeNetwork.git /repos/evilhun/HomeNetwork
+WORKDIR /repos/evilhun/HomeNetwork
 RUN git config pull.rebase true
 
 # create & activate python virtual environment, install python requirements
